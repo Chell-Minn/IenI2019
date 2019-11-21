@@ -5,6 +5,7 @@ function setup() {
   noLoop();
   colorMode(RGB, 255, 255, 255, 1);
   fill(178, 34, 34,.5);
+  angleMode(DEGREES);
 }
 
 function draw() {
@@ -12,7 +13,7 @@ function draw() {
   translate(125,125);
   rect(0,0,200,200);
   
-  rotate(0);
+  rotate(45);
   
   rect(0,0,200,200);
 }

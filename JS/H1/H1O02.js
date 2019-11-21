@@ -17,6 +17,7 @@ function draw() {
   beginShape();
   vertex(225,115)
   vertex(300,225)
-  vertex(225,3350)
+  vertex(225,335)
   vertex(0,225)
+  endShape(CLOSE);
 }

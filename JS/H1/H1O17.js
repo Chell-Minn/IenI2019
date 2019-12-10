@@ -13,6 +13,10 @@ function draw() {
   // teken de grond
   fill('wheat');
   rect(0,250,width,height - 250);  
+  
+  tekenBoom(50);
+  tekenBoom(150);
+  tekenBoom(250);
 
   tekenHuis();
 

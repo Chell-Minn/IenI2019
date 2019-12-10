@@ -17,5 +17,5 @@ function draw() {
       fill('white');
   }
   ellipse(225,225,diameter);
-  diameter += 0.00000001;
+  diameter += 0.1;
 }

@@ -1,6 +1,6 @@
 var x = 120;
 var snelheid = 5;
-var diameter = 200;
+var diameter = 100;
 
 function setup() {
   canvas = createCanvas(1000,300);
@@ -20,20 +20,25 @@ function draw() {
   stroke('white');
   strokeWeight(10);
 
-  if (mouseIsPressed == true && snelheid == 5) {
-      fill('green');
-  }
-  else {
-    fill('dodgerblue');
-  }
   
-  if (x>880) {
-    snelheid = -1*snelheid;
-  }
-  if (x<120) {
+  
+  if (x>880 || x < 120) {
     snelheid = -1*snelheid;
   }
 
+  if (snelheid == 5) {
+      fill('green')
+  }
+  else {
+      fill('dodgerblue')
+  }
+  if (mouseIsPressed == true) {
+      diameter = 200
+      fill('red')
+  }
+  else{
+      diameter = 100
+  }
   x += snelheid;
   ellipse(x,170,diameter);
 }

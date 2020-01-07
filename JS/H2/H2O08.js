@@ -13,13 +13,18 @@ function setup() {
 
 function draw() {
   tekenAchtergrond();
-
+  
   for (var h = 0;h < huisNummers.length;h++) {
     tekenHuis(kleur,huisNummers[h],huisEigenaren[h]);
     translate(150,0);
+    if (kleur == 'lightgray') {
+      kleur = 'darkgrey';
+    }
+    else {
+      kleur = 'lightgray';
+    }    
   }
-    
-
+  
 }
 
 function tekenHuis(kleur,nr,naam) {
@@ -40,6 +45,6 @@ function tekenHuis(kleur,nr,naam) {
 
 function tekenAchtergrond() {
   fill('wheat');
-  rect(0,220,width,height - 220);
+  rect(0,220,width,height-220);
   translate(50,0);
 }
